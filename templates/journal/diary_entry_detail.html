@@ -1,0 +1,10 @@
+<!-- diary_entry_detail.html -->
+{% extends 'website/base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>{{ entry.date_entry }}</h2>
+    <p>{{ entry.paragraphs|safe }}</p>
+    <p>Mood: {{ entry.mood }}</p>
+  </div>
+{% endblock %}

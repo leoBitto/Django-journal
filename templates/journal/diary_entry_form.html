@@ -1,0 +1,17 @@
+<!-- diary_entry_form.html -->
+{% extends 'website/base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>Create Diary Entry</h2>
+    <form method="post" action="{% url 'journal:diary_entry_create' %}" class="mt-4">
+      {% csrf_token %}
+      <div class="mb-3">
+        {{ form.media }}
+        {{ form.as_p }}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+{% endblock %}

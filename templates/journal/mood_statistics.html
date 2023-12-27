@@ -1,0 +1,11 @@
+<!-- mood_statistics.html -->
+{% extends 'website/base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>Mood Statistics</h2>
+    {% for stat in mood_stats %}
+      <p>{{ stat.date_entry }} - Average Mood: {{ stat.average_mood }}</p>
+    {% endfor %}
+  </div>
+{% endblock %}
