@@ -9,7 +9,7 @@ def diary_entry_create(request):
         form = DiaryEntryForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('diary_entry_created')
+            return redirect('journal:diary_entry_create')
     else:
         form = DiaryEntryForm()
     return render(request, 'journal/diary_entry_form.html', {'form': form})

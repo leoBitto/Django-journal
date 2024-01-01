@@ -14,4 +14,4 @@ class Entry(models.Model):
     mood = models.IntegerField(choices=MOOD_CHOICES, default=0)
 
     def __str__(self):
-        return f"{self.date_entry} - Mood: {self.mood}"
+        return f"{self.date_created} - Mood: {self.mood}"
